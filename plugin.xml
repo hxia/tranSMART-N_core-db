@@ -1,0 +1,72 @@
+<plugin name='transmart-core' version='1.0-SNAPSHOT' grailsVersion='2.2.4 &gt; *'>
+  <author>Transmart Foundation</author>
+  <authorEmail>admin@transmartproject.org</authorEmail>
+  <title>Transmart Core DB Plugin</title>
+  <description>A runtime dependency for tranSMART that implements the Core API
+</description>
+  <documentation>http://transmartproject.org</documentation>
+  <type>TransmartCoreGrailsPlugin</type>
+  <resources>
+    <resource>org.transmartproject.db.ontology.http.BusinessExceptionController</resource>
+    <resource>org.transmartproject.db.ontology.http.ConceptsController</resource>
+    <resource>org.transmartproject.db.ontology.http.QueryToolController</resource>
+    <resource>org.transmartproject.db.highdim.DeChromosomalRegion</resource>
+    <resource>org.transmartproject.db.highdim.DeGplInfo</resource>
+    <resource>org.transmartproject.db.highdim.DeSubjectAcghData</resource>
+    <resource>org.transmartproject.db.highdim.DeSubjectSampleMapping</resource>
+    <resource>org.transmartproject.db.i2b2data.ConceptDimension</resource>
+    <resource>org.transmartproject.db.i2b2data.PatientDimension</resource>
+    <resource>org.transmartproject.db.ontology.Birn</resource>
+    <resource>org.transmartproject.db.ontology.I2b2</resource>
+    <resource>org.transmartproject.db.ontology.I2b2Secure</resource>
+    <resource>org.transmartproject.db.ontology.TableAccess</resource>
+    <resource>org.transmartproject.db.querytool.QtPatientSetCollection</resource>
+    <resource>org.transmartproject.db.querytool.QtQueryInstance</resource>
+    <resource>org.transmartproject.db.querytool.QtQueryMaster</resource>
+    <resource>org.transmartproject.db.querytool.QtQueryResultInstance</resource>
+    <resource>org.transmartproject.db.dataquery.DataQueryResourceNoGormService</resource>
+    <resource>org.transmartproject.db.dataquery.DataQueryResourceService</resource>
+    <resource>org.transmartproject.db.ontology.ConceptsResourceService</resource>
+    <resource>org.transmartproject.db.querytool.PatientSetQueryBuilderService</resource>
+    <resource>org.transmartproject.db.querytool.QueriesResourceService</resource>
+    <resource>org.transmartproject.db.querytool.QueryDefinitionXmlService</resource>
+    <resource>org.transmartproject.db.support.MarshallerRegistrarService</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+    <repository name='repo.transmartfoundation.org-public' url='https://repo.transmartfoundation.org/content/repositories/public/' />
+    <repository name='repo.transmartfoundation.org' url='http://repo.transmartfoundation.org/content/repositories/public/' />
+    <repository name='http://grails.org/plugins' url='http://grails.org/plugins' />
+    <repository name='http://m2repo.spockframework.org/releases/' url='http://m2repo.spockframework.org/releases/' />
+    <repository name='http://m2repo.spockframework.org/snapshots/' url='http://m2repo.spockframework.org/snapshots/' />
+  </repositories>
+  <dependencies>
+    <compile>
+      <dependency group='antlr' name='antlr' version='2.7.7' />
+    </compile>
+    <runtime>
+      <dependency group='postgresql' name='postgresql' version='9.0-801.jdbc4' />
+    </runtime>
+  </dependencies>
+  <plugins>
+    <test>
+      <plugin group='org.grails.plugins' name='code-coverage' version='1.2.6' />
+    </test>
+    <compile>
+      <plugin group='org.grails.plugins' name='quartz' version='1.0-RC2' />
+      <plugin group='org.grails.plugins' name='resources' version='1.2' />
+      <plugin group='org.grails.plugins' name='hibernate' version='2.2.4' />
+      <plugin group='org.grails.plugins' name='spring-security-core' version='1.2.7.3' />
+    </compile>
+    <runtime>
+      <plugin group='org.grails.plugins' name='prototype' version='1.0' />
+    </runtime>
+    <build>
+      <plugin group='org.grails.plugins' name='tomcat' version='2.2.4' />
+      <plugin group='org.grails.plugins' name='build-info' version='1.1' />
+    </build>
+  </plugins>
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>
